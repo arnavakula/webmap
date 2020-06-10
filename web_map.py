@@ -1,7 +1,8 @@
 import folium, pandas
 
 map = folium.Map(location = [38.2, -99.1], zoom_start = 6) #lat, lon
-fg = folium.FeatureGroup(name = 'my-map')
+markers = folium.FeatureGroup(name = 'Volcano Markers')
+pops = folium.FeatureGroup(name = 'Population')
 dfv = pandas.read_csv('volcanoes.txt')
 
 def get_marker_color(elev):
@@ -15,12 +16,13 @@ for i in range(62):
     name = str(dfv.loc[i, 'NAME'])
     elev = float(dfv.loc[i, 'ELEV'])
    
-    fg.add_child(folium.CircleMarker(location = coord, radius = 7, popup = name + ': %.2f m' %elev, fill_color = get_marker_color(elev), color = 'gray', fill_opacity = 0.6))
+    markers.add_child(folium.CircleMarker(location = coord, radius = 7, popup = name + ': %.2f m' %elev, fill_color = get_marker_color(elev), color = 'gray', fill_opacity = 0.6))
 
-fg.add_child(folium.GeoJson(data = open('world.json', 'r', encoding = 'utf-8-sig').read(), style_function = lambda x : get_pop_color(x['properties']['POP2005'])))
+pops.add_child(folium.GeoJson(data = open('world.json', 'r', encoding = 'utf-8-sig').read(), style_function = lambda x : get_pop_color(x['properties']['POP2005'])))
 
-
-map.add_child(fg)
+map.add_child(markers)
+map.add_child(pops)
+map.add_child(folium.LayerControl())
 map.save('Web-map.html')
 
 
