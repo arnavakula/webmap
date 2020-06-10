@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e850ac01b5894e138c9d8eebf02f4467 {
+                #map_32f1e518820c449197d0944b076b9c1d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,17 +35,17 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_e850ac01b5894e138c9d8eebf02f4467" ></div>
+            <div class="folium-map" id="map_32f1e518820c449197d0944b076b9c1d" ></div>
         
 </body>
 <script>    
     
-            var map_e850ac01b5894e138c9d8eebf02f4467 = L.map(
-                "map_e850ac01b5894e138c9d8eebf02f4467",
+            var map_32f1e518820c449197d0944b076b9c1d = L.map(
+                "map_32f1e518820c449197d0944b076b9c1d",
                 {
-                    center: [0.0, 0.0],
+                    center: [38.2, -99.1],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 6,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -55,9 +55,64 @@
 
         
     
-            var tile_layer_6065066d78234b418d2cf6b6471ce69f = L.tileLayer(
+            var tile_layer_3c57220149d744adbb03d5dceec6afce = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_e850ac01b5894e138c9d8eebf02f4467);
+            ).addTo(map_32f1e518820c449197d0944b076b9c1d);
         
+    
+            var feature_group_c63d797513a64593b9560f6c155d229d = L.featureGroup(
+                {}
+            ).addTo(map_32f1e518820c449197d0944b076b9c1d);
+        
+    
+            var marker_1d5fe3d8d1e64d37822ac7bfb97d4f66 = L.marker(
+                [38.2, -99.1],
+                {}
+            ).addTo(feature_group_c63d797513a64593b9560f6c155d229d);
+        
+    
+            var icon_5d1fd6c0147d4d6bbcffa1c3eae5d37e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1d5fe3d8d1e64d37822ac7bfb97d4f66.setIcon(icon_5d1fd6c0147d4d6bbcffa1c3eae5d37e);
+        
+    
+        var popup_2128728617a64ca398c807064371eaab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7558f9b84ea84f43b68d4a32838bfc3d = $(`<div id="html_7558f9b84ea84f43b68d4a32838bfc3d" style="width: 100.0%; height: 100.0%;">Testing marker</div>`)[0];
+            popup_2128728617a64ca398c807064371eaab.setContent(html_7558f9b84ea84f43b68d4a32838bfc3d);
+        
+
+        marker_1d5fe3d8d1e64d37822ac7bfb97d4f66.bindPopup(popup_2128728617a64ca398c807064371eaab)
+        ;
+
+        
+    
+    
+            var marker_107e5aeb68834039bfb68b9009ea20a4 = L.marker(
+                [39.2, -97.1],
+                {}
+            ).addTo(feature_group_c63d797513a64593b9560f6c155d229d);
+        
+    
+            var icon_1c0640dac92f48ecb1a115e90fc21c18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_107e5aeb68834039bfb68b9009ea20a4.setIcon(icon_1c0640dac92f48ecb1a115e90fc21c18);
+        
+    
+        var popup_5f8fdb8f47f548c79fcab5f4b104d8ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a9cfbb6f408405c98dc907b8e80bdd0 = $(`<div id="html_8a9cfbb6f408405c98dc907b8e80bdd0" style="width: 100.0%; height: 100.0%;">Testing marker</div>`)[0];
+            popup_5f8fdb8f47f548c79fcab5f4b104d8ac.setContent(html_8a9cfbb6f408405c98dc907b8e80bdd0);
+        
+
+        marker_107e5aeb68834039bfb68b9009ea20a4.bindPopup(popup_5f8fdb8f47f548c79fcab5f4b104d8ac)
+        ;
+
+        
+    
 </script>
